@@ -1,15 +1,18 @@
 {
+    "require": {
+
+    },
     "require-dev": {
         "phpunit/phpunit": "~4.2"
     },
     "minimum-stability": "stable",
     "autoload": {
-        "psr4": {
-            "Ajirass\\VarTypeValidator": "src",
-            "Tests\\Ajirass\\VarTypeValidator": "tests"
-        },
-        "config": {
-            "bin-dir": "bin"
+        "psr-4": {
+            "Ajirass\\VarTypeValidator\\": "src",
+            "Tests\\Ajirass\\VarTypeValidator\\": "tests"
         }
+    },
+    "config": {
+        "bin-dir": "bin"
     }
 }
