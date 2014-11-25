@@ -16,7 +16,7 @@ class DateTimeValidator
      */
     public static function isYear(\Datetime $date, $year)
     {
-        $result = ($date->format("Y") === $year) ? true : false;
+        $result = ($date->format('Y') === $year) ? true : false;
 
         return $result;
     }
@@ -29,7 +29,7 @@ class DateTimeValidator
      */
     public static function isNumericMonth(\Datetime $date, $month)
     {
-        $result = ($date->format("m") === $month) ? true : false;
+        $result = ($date->format('m') === $month) ? true : false;
 
         return $result;
     }
@@ -42,7 +42,7 @@ class DateTimeValidator
      */
     public static function isNumericDay(\Datetime $date, $day)
     {
-        $result = ($date->format("d") === $day) ? true : false;
+        $result = ($date->format('d') === $day) ? true : false;
 
         return $result;
     }
