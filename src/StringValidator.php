@@ -35,14 +35,14 @@ class StringValidator
 
     public static function noWhiteSpaceStartEnd($string)
     {
-        $result = (true === preg_match('/^ /', $string)) || (true === preg_match('/ $/', $string)) ? false : true;
+        $result = (true == preg_match('/^ /', $string)) || (true == preg_match('/ $/', $string)) ? false : true;
 
         return $result;
     }
 
     public static function noWhiteSpace($string)
     {
-        $result = true === preg_match('/ /', $string) ? false : true;
+        $result = true == preg_match('/ /', $string) ? false : true;
 
         return $result;
     }
