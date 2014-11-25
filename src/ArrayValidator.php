@@ -33,8 +33,22 @@ class ArrayValidator
     public static function numberElementsCompare(array $array, $length, $operator = self::EQUAL_OPERATOR)
     {
         $arrayLength = count($array);
-
-        $result = self::getSwitchOperationResult($arrayLength, $length, $operator);
+        switch($operator) {
+            case self::GREATER_OPERATOR:
+                $result = $arrayLength > $length ? true : false;
+                break;
+            case self::GREATER_EQUAL_OPERATOR:
+                $result = $arrayLength >= $length ? true : false;
+                break;
+            case self::LESS_OPERATOR:
+                $result = $arrayLength < $length ? true : false;
+                break;
+            case self::LESS_EQUAL_OPERATOR:
+                $result = $arrayLength <= $length ? true : false;
+                break;
+            default:
+                $result = $arrayLength === $length ? true : false;
+        }
 
         return $result;
     }
@@ -74,21 +88,5 @@ class ArrayValidator
     public static function valueExist(array $array, $value)
     {
         return in_array($value, $array);
-    }
-
-    private static function getSwitchOperationResult($arrayLength, $length, $operator)
-    {
-        switch($operator) {
-            case self::GREATER_OPERATOR:
-                return $arrayLength > $length ? true : false;
-            case self::GREATER_EQUAL_OPERATOR:
-                return $arrayLength >= $length ? true : false;
-            case self::LESS_OPERATOR:
-                return $arrayLength < $length ? true : false;
-            case self::LESS_EQUAL_OPERATOR:
-                return $arrayLength <= $length ? true : false;
-            default:
-                return $arrayLength === $length ? true : false;
-        }
     }
 }
