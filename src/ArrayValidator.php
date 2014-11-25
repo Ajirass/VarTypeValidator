@@ -76,7 +76,7 @@ class ArrayValidator
         return in_array($value, $array);
     }
 
-    private function getSwitchOperationResult($arrayLength, $length, $operator)
+    private static function getSwitchOperationResult($arrayLength, $length, $operator)
     {
         switch($operator) {
             case self::GREATER_OPERATOR:
