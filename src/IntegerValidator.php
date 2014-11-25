@@ -1,6 +1,7 @@
 <?php
 namespace Ajirass\VarTypeValidator;
 
+
 /**
  * Class IntegerValidator
  * @package Ajirass\VarTypeValidator
