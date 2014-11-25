@@ -3,12 +3,12 @@
 require __DIR__.'/vendor/autoload.php';
 
 
-$string = [
-    'test' => 'test',
-    'osef' => 'test',
-    'blabla' => 'test'
-];
+$date = new \DateTime();
+$dateMin = new \DateTime("-2 day");
+$dateMax = new \DateTime('+2 day');
 
-$result = \Ajirass\VarTypeValidator\ArrayValidator::numberElementsBetween($string, 1, 4);
+
+
+$result = \Ajirass\VarTypeValidator\DateTimeValidator::isBefore($date, $dateMin);
 
 var_dump($result);

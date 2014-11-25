@@ -1,7 +1,6 @@
 <?php
 namespace Ajirass\VarTypeValidator;
 
-
 /**
  * Class BooleanValidator
  * @package Ajirass\VarTypeValidator
