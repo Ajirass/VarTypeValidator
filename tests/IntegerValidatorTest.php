@@ -8,54 +8,54 @@ class IntegerValidatorTest extends \PHPUnit_Framework_TestCase
     public function testIntegerEqual()
     {
         $integer = $integerEqual = mt_rand ( 0, 200 );
-        $resultat = IntegerValidator::equal($integer, $integerEqual);
+        $result = IntegerValidator::equal($integer, $integerEqual);
 
-        $this->assertTrue($resultat);
+        $this->assertTrue($result);
     }
 
     public function testIntegerNotEqual()
     {
         $integer = mt_rand ( 0, 200 );
         $integerNotEqual = mt_rand ( 201, 400 );
-        $resultat = IntegerValidator::equal($integer, $integerNotEqual);
+        $result = IntegerValidator::equal($integer, $integerNotEqual);
 
-        $this->assertFalse($resultat);
+        $this->assertFalse($result);
     }
 
     public function testIntegerGreaterThan()
     {
         $integer = mt_rand ( 201, 400 );
         $integerGreater = mt_rand ( 0, 200 );
-        $resultat = IntegerValidator::greaterThan($integer, $integerGreater);
+        $result = IntegerValidator::greaterThan($integer, $integerGreater);
 
-        $this->assertTrue($resultat);
+        $this->assertTrue($result);
     }
 
     public function testIntegerNotGreaterThan()
     {
         $integer = mt_rand ( 0, 200 );
         $integerNotGreater = mt_rand ( 201, 400 );
-        $resultat = IntegerValidator::greaterThan($integer, $integerNotGreater);
+        $result = IntegerValidator::greaterThan($integer, $integerNotGreater);
 
-        $this->assertFalse($resultat);
+        $this->assertFalse($result);
     }
 
     public function testIntegerLessThan()
     {
         $integer = mt_rand ( 0, 200 );
         $integerLess = mt_rand ( 201, 400 );
-        $resultat = IntegerValidator::lessThan($integer, $integerLess);
+        $result = IntegerValidator::lessThan($integer, $integerLess);
 
-        $this->assertTrue($resultat);
+        $this->assertTrue($result);
     }
 
     public function testIntegerNotLessThan()
     {
         $integer = mt_rand ( 201, 400 );
         $integerNotLess = mt_rand ( 0, 200 );
-        $resultat = IntegerValidator::lessThan($integer, $integerNotLess);
+        $result = IntegerValidator::lessThan($integer, $integerNotLess);
 
-        $this->assertFalse($resultat);
+        $this->assertFalse($result);
     }
 
     public function testIntegerBetween()
@@ -63,9 +63,9 @@ class IntegerValidatorTest extends \PHPUnit_Framework_TestCase
         $integer = mt_rand ( 201, 400 );
         $min = mt_rand ( 0, 200 );
         $max = mt_rand( 401, 600 );
-        $resultat = IntegerValidator::between($integer, $min, $max);
+        $result = IntegerValidator::between($integer, $min, $max);
 
-        $this->assertTrue($resultat);
+        $this->assertTrue($result);
     }
 
     public function testIntegerNotBetween()
@@ -73,73 +73,74 @@ class IntegerValidatorTest extends \PHPUnit_Framework_TestCase
         $integer = mt_rand ( 0, 200 );
         $min = mt_rand ( 200, 400 );
         $max = mt_rand( 401, 600 );
-        $resultat = IntegerValidator::between($integer, $min, $max);
+        $result = IntegerValidator::between($integer, $min, $max);
 
-        $this->assertFalse($resultat);
+        $this->assertFalse($result);
     }
 
     public function testIntegerPositiveWithZero()
     {
         $integer = mt_rand(0, 200);
-        $resultat = IntegerValidator::positive($integer, true);
+        $result = IntegerValidator::positive($integer, true);
 
-        $this->assertTrue($resultat);
+        $this->assertTrue($result);
     }
 
     public function testIntegerNotPositiveWithZero()
     {
         $integer = mt_rand(-200, -1);
-        $resultat = IntegerValidator::positive($integer, true);
+        $result = IntegerValidator::positive($integer, true);
 
-        $this->assertFalse($resultat);
+        $this->assertFalse($result);
     }
 
     public function testIntegerPositiveWithoutZero()
     {
         $integer = mt_rand(1, 200);
-        $resultat = IntegerValidator::positive($integer);
+        $result = IntegerValidator::positive($integer);
 
-        $this->assertTrue($resultat);
+        $this->assertTrue($result);
     }
 
     public function testIntegerNotPositiveWithoutZero()
     {
         $integer = mt_rand(-200, 0);
-        $resultat = IntegerValidator::positive($integer);
+        $result = IntegerValidator::positive($integer);
 
-        $this->assertFalse($resultat);
+        $this->assertFalse($result);
     }
 
     public function testIntegerNegativeWithZero()
     {
         $integer = mt_rand(-200, 0);
-        $resultat = IntegerValidator::negative($integer, true);
+        $result = IntegerValidator::negative($integer, true);
 
-        $this->assertTrue($resultat);
+        $this->assertTrue($result);
     }
 
     public function testIntegerNotNegativeWithZero()
     {
         $integer = mt_rand(1, 200);
-        $resultat = IntegerValidator::negative($integer, true);
+        $result = IntegerValidator::negative($integer, true);
 
-        $this->assertFalse($resultat);
+        $this->assertFalse($result);
     }
 
     public function testIntegerNegativeWithoutZero()
     {
         $integer = mt_rand(-200, -1);
-        $resultat = IntegerValidator::negative($integer);
+        $result = IntegerValidator::negative($integer);
 
-        $this->assertTrue($resultat);
+        $this->assertTrue($result);
     }
 
     public function testIntegerNotNegativeWithoutZero()
     {
         $integer = mt_rand(0, 200);
-        $resultat = IntegerValidator::negative($integer);
+        $result = IntegerValidator::negative($integer);
 
-        $this->assertFalse($resultat);
+        $this->assertFalse($result);
     }
 
 }
+
