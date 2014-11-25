@@ -61,6 +61,7 @@ checks:
         code_rating: true
         deadlock_detection_in_loops: true
         deprecated_code_usage: true
+        duplication: true
         encourage_shallow_comparison: true
         encourage_postdec_operator: true
         encourage_single_quotes: true

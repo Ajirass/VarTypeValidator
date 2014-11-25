@@ -7,7 +7,7 @@ namespace Ajirass\VarTypeValidator;
  */
 class ArrayValidator
 {
-    const EQUAL_OPERATOR         = '=';
+    const EQUAL_OPERATOR         = '===';
     const GREATER_OPERATOR       = '>';
     const GREATER_EQUAL_OPERATOR = '>=';
     const LESS_OPERATOR          = '<';
