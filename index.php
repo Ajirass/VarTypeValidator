@@ -3,6 +3,8 @@
 require __DIR__.'/vendor/autoload.php';
 
 
-$equalInt = \Ajirass\VarTypeValidator\IntegerValidator::negative(10);
+$string = "abcdef";
 
-var_dump($equalInt);
+$result = \Ajirass\VarTypeValidator\StringValidator::noWhiteSpaceStartEnd($string);
+
+var_dump($result);
