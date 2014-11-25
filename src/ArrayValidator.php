@@ -26,29 +26,29 @@ class ArrayValidator
 
     /**
      * @param array $array
-     * @param $compare
+     * @param int $length
      * @param string $operator
      *
      * @return bool
      */
-    public static function numberElements(array $array, $compare, $operator = self::EQUAL_OPERATOR)
+    public static function numberElementsCompare(array $array, $length, $operator = self::EQUAL_OPERATOR)
     {
         $arrayLength = count($array);
         switch($operator) {
             case self::GREATER_OPERATOR:
-                $result = $arrayLength > $compare ? true : false;
+                $result = $arrayLength > $length ? true : false;
                 break;
             case self::GREATER_EQUAL_OPERATOR:
-                $result = $arrayLength >= $compare ? true : false;
+                $result = $arrayLength >= $length ? true : false;
                 break;
             case self::LESS_OPERATOR:
-                $result = $arrayLength < $compare ? true : false;
+                $result = $arrayLength < $length ? true : false;
                 break;
             case self::LESS_EQUAL_OPERATOR:
-                $result = $arrayLength <= $compare ? true : false;
+                $result = $arrayLength <= $length ? true : false;
                 break;
             default:
-                $result = $arrayLength === $compare ? true : false;
+                $result = $arrayLength === $length ? true : false;
         }
 
         return $result;
